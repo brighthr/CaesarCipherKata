@@ -15,10 +15,17 @@ For example, with a left shift of 3, D would be replaced by A, E would become B,
 The task for the kata is to implement 3 functions, as outlined in the pseudocode example below:
 
 ```
-encrypt("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 3) -> "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
-decrypt("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 3) -> "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
-crack("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD")      -> 3
+// Take a plaintext string and apply the cipher using the given shift value.
+encrypt("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 23) -> "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
+
+// Take a ciphertext string and decrypt it using the given shift value.
+decrypt("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 23) -> "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
+
+// Take a ciphertext string and attempt to find the shift value used to encrypt it.
+crack("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD") -> 23
 ```
+
+A positive shift value indicates a right shift, and a negative value indicates a left shift. The `crack` function should always return the value as a right shift.
 
 ## Resources
 
@@ -30,5 +37,5 @@ crack("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD")      -> 3
 Depending on your initial approach, the kata itself may be quite straightforward. If you like, here are some ideas for requirements you could add to increase or extend the challenge:
 
 * Handle both uppercase and lowercase letters.
-* Crack cyphertexts which include one or more words *not* found in the word list. e.g. "BRIGHTHR".
-* Crack cyphertexts where the words are not separated by spaces.
+* Crack ciphertexts which include one or more words *not* found in the word list. e.g. "BRIGHTHR".
+* Crack ciphertexts where the words are not separated by spaces.
