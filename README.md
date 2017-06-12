@@ -1,2 +1,34 @@
 # CaesarCipherKata
-Code kata based on the Caesar cipher
+
+A code kata based on the Caesar cipher
+
+## The Caesar cipher
+
+The Caesar cipher, as a shift cipher, is one of the simplest forms of encryption. It is a substitution cipher where each letter in the original message is replaced with a letter some fixed number of positions up or down in the alphabet.
+
+For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. Note that the letters 'wrap around' when you reach the end of the alphabet, so C would map to Z for instance.
+
+![Left shift 3](https://upload.wikimedia.org/wikipedia/commons/4/4a/Caesar_cipher_left_shift_of_3.svg)
+
+## The kata
+
+The task for the kata is to implement 3 functions, as outlined in the pseudocode example below:
+
+```
+encrypt("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 3) -> "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
+decrypt("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 3) -> "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
+crack("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD")      -> 3
+```
+
+## Resources
+
+* A simple word list file is provided, named `wordlist.txt`. You may find it useful when implementing the `crack` function!
+* The [Wikipedia page](https://en.wikipedia.org/wiki/Caesar_cipher) has further information which you may find useful.
+
+## Optional extras
+
+Depending on your initial approach, the kata itself may be quite straightforward. If you like, here are some ideas for requirements you could add to increase or extend the challenge:
+
+* Handle both uppercase and lowercase letters.
+* Crack cyphertexts which include one or more words *not* found in the word list. e.g. "BRIGHTHR".
+* Crack cyphertexts where the words are not separated by spaces.
