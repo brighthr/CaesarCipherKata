@@ -14,7 +14,7 @@ For example, with a left shift of 3, D would be replaced by A, E would become B,
 
 ## The kata
 
-The task for the kata is to implement 3 functions, as outlined in the pseudocode example below:
+The task for the kata is to implement 3 methods, as outlined in the pseudocode example below:
 
 ```
 // Take a plaintext string and apply the cipher using the given shift value.
@@ -27,12 +27,9 @@ decrypt("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 23) -> "THE QUICK BROWN F
 crack("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD") -> 23
 ```
 
-A positive shift value indicates a right shift, and a negative value indicates a left shift. The `crack` function should always return the value as a right shift.
-
-
-## Resources
-
-* A simple word list file is provided, named `wordlist.txt`. You may find it useful when implementing the `crack` function!
+* A positive shift value indicates a right shift, and a negative value indicates a left shift.
+* A simple word list file, `wordlist.txt`, is provided. You may find it useful when implementing the `crack` method!
+* The `crack` method could return a right shift or a left value (it's up to you!).
 * The [Wikipedia page](https://en.wikipedia.org/wiki/Caesar_cipher) has further information which you may find useful.
 
 
